@@ -145,3 +145,21 @@ printTeilnehmer("Max")
 printTeilnehmer("Max", "Tim", "Udo")
 
 ##################################################
+
+# M007
+
+# Ü1
+print([i + 12 for i in range(1, 31) if i % 6 == 0])
+
+# Ü2
+text = "Ich bin ein Text"
+print([zeichen.upper() for zeichen in text if zeichen.islower()])
+
+# Ü3
+split = text.split(" ")
+print(split)
+
+print([wort[0].upper() for wort in split])
+
+# Ü4
+print([wort for wort in split if len(wort) <= 3])
