@@ -1,4 +1,4 @@
-# Ü003
+# Ü004
 
 # Ü1
 list1 = [1, 2, 3, 4]
@@ -36,3 +36,58 @@ print(gesucht.intersection(list2))
 print(gesucht.intersection(list3))
 
 ##################################################
+
+# Ü005
+
+# Ü1
+
+# i = 0
+# while i < 100:
+# 	i += 1
+
+for i in range(1, 101):
+	if i % 3 == 0 and i % 5 == 0:
+		print("FizzBuzz")
+	elif i % 3 == 0:
+		print("Fizz")
+	elif i % 5 == 0:
+		print("Buzz")
+	else:
+		print(i)
+
+# Ü2
+for i in range(1, 201):
+	letzteZiffer = i % 10
+	letztenBeidenZiffern = i % 100
+
+	letzteZifferStr = str(i)[-1]
+	letztenBeidenZifferStr = str(i)[-2:]
+
+	if letztenBeidenZiffern in [11, 12, 13]:
+		print(f"{i}th")
+	elif letzteZiffer == 1:
+		print(f"{i}st")
+	elif letzteZifferStr == "2":  # Sonderfall: String konvertieren
+		print(f"{i}nd")
+	elif letzteZiffer == 3:
+		print(f"{i}rd")
+	else:
+		print(f"{i}th")
+
+# Ü3
+import time
+for i in range(3600):
+	min = i // 60  # 150 sek / 60 = 2.5 -> 2
+	sek = i % 60  # 150 sek % 60 = 30
+	print(f"{min}:{sek}")
+	time.sleep(1)
+
+for m in range(60):
+	for s in range(60):
+		print(f"{m}:{s}")
+		time.sleep(1)
+
+# Ü4
+for m in range(1, 11):
+	for s in range(1, 11):
+		print(f"{m} x {s} = {m * s}")

@@ -48,6 +48,13 @@ while a < 10:
 else:
 	print("Alles Gut")
 
+# Endlosschleife
+while True:
+	print("Endlos")
+
+	if a == 100:
+		break
+
 ###################################################
 
 # for-Schleife
