@@ -80,14 +80,68 @@ for i in range(3600):
 	min = i // 60  # 150 sek / 60 = 2.5 -> 2
 	sek = i % 60  # 150 sek % 60 = 30
 	print(f"{min}:{sek}")
-	time.sleep(1)
+	# time.sleep(1)
 
 for m in range(60):
 	for s in range(60):
 		print(f"{m}:{s}")
-		time.sleep(1)
+		# time.sleep(1)
 
 # Ü4
 for m in range(1, 11):
 	for s in range(1, 11):
 		print(f"{m} x {s} = {m * s}")
+
+##################################################
+
+# M006
+
+# Ü1
+def maximum(*zahlen):
+	l = list(zahlen)
+	l.sort()
+	print(l[-1])
+
+def maximum(*zahlen):
+	x = zahlen[0]  # Bonus-Lösung
+	for i in zahlen:
+		if i > x:
+			x = i
+	print(x)
+
+# Ü2
+def countCase(text: str):
+	k = 0
+	g = 0
+	s = 0
+	for zeichen in text:
+		if zeichen.islower():
+			k += 1
+		elif zeichen.isupper():
+			g += 1
+		else:
+			s += 1
+	print(f"Kleinbuchstaben: {k}, Großbuchstaben: {g}, Sonderzeichen: {s}")
+
+countCase("Hallo Welt")
+
+# Ü3
+def printTeilnehmer(*tn):
+	gesamt = ""
+	if len(tn) == 0:
+		gesamt = "Keine Teilnehmer"
+	elif len(tn) == 1:
+		gesamt = tn[0]
+	else:
+		for t in tn[0:-1]:
+			gesamt += t
+			gesamt += ", "
+		gesamt = gesamt.strip(", ")  # Muss wieder in die Variable zurückgeschrieben werden
+		gesamt += " und " + tn[-1]
+	print(gesamt)
+
+printTeilnehmer()
+printTeilnehmer("Max")
+printTeilnehmer("Max", "Tim", "Udo")
+
+
