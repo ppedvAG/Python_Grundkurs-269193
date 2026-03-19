@@ -1,0 +1,6 @@
+Strg + K, Strg + C: Codeblock/Zeile auskommentieren
+Strg + K, Strg + U: Codeblock/Zeile einkommentieren
+Strg + K, Strg + D: Code formatieren
+Main Menu -> Code -> fast ganz unten -> Move Line Down/Up
+Strg + D: Zeile duplizieren
+Strg + Leertaste: Vorschläge zeigen
