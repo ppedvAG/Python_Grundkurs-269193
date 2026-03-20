@@ -163,3 +163,37 @@ print([wort[0].upper() for wort in split])
 
 # Ü4
 print([wort for wort in split if len(wort) <= 3])
+
+##################################################
+
+# M008
+
+# Ü2
+while True:
+	zahl1 = input("Gib eine Zahl ein: ")
+	zahl2 = input("Gib eine weitere Zahl ein: ")
+	if not zahl1.isnumeric() or not zahl2.isnumeric():
+		exit()
+
+	zahl1 = int(zahl1)
+	zahl2 = int(zahl2)
+
+	while True:
+		operation = input("1: Addition\n2: Subtraktion\n3: Multiplikation\n4: Division")
+		if operation.isnumeric():
+			operationInt = int(operation)
+			if operationInt in [1, 2, 3, 4]:
+				break  # Wenn die Schleife einfach ausläuft (kein break), geht sie wieder von vorne los
+
+	if operationInt == 1:
+		print(f"{zahl1} + {zahl2} = {zahl1 + zahl2}")
+	elif operationInt == 2:
+		print(f"{zahl1} - {zahl2} = {zahl1 - zahl2}")
+	elif operationInt == 3:
+		print(f"{zahl1} * {zahl2} = {zahl1 * zahl2}")
+	elif operationInt == 4:
+		print(f"{zahl1} / {zahl2} = {zahl1 / zahl2}")
+
+	frage = input("Wiederholen? (Y)")
+	if frage != "Y":
+		break
